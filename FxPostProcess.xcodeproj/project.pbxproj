@@ -1,0 +1,635 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		050462F82B98555700210B25 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 050462F72B98555700210B25 /* Cocoa.framework */; };
+		050463002B98555700210B25 /* FxPostProcess XPC Service.pluginkit in Embed PlugIns */ = {isa = PBXBuildFile; fileRef = 050462FF2B98555700210B25 /* FxPostProcess XPC Service.pluginkit */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		050463042B98555700210B25 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 050463032B98555700210B25 /* Foundation.framework */; };
+		050463062B98555700210B25 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 050463052B98555700210B25 /* AppKit.framework */; };
+		050463082B98555700210B25 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 050463072B98555700210B25 /* Accelerate.framework */; };
+		0504630A2B98555700210B25 /* PluginManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 050463092B98555700210B25 /* PluginManager.framework */; };
+		0504630C2B98555700210B25 /* FxPlug.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0504630B2B98555700210B25 /* FxPlug.framework */; };
+		050463132B98555700210B25 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 050463122B98555700210B25 /* AppDelegate.m */; };
+		050463172B98555700210B25 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 050463162B98555700210B25 /* main.m */; };
+		050463192B98555700210B25 /* FxPostProcessPlugIn.m in Sources */ = {isa = PBXBuildFile; fileRef = 050463182B98555700210B25 /* FxPostProcessPlugIn.m */; };
+		0504631E2B98555700210B25 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0504631C2B98555700210B25 /* InfoPlist.strings */; };
+		050463202B98555700210B25 /* MetalDeviceCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 0504631F2B98555700210B25 /* MetalDeviceCache.m */; };
+		050463232B98555700210B25 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 050463212B98555700210B25 /* MainMenu.xib */; };
+		050463262B98555700210B25 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 050463242B98555700210B25 /* Credits.rtf */; };
+		050463282B98555700210B25 /* TileableRemoteBrightness.metal in Sources */ = {isa = PBXBuildFile; fileRef = 050463272B98555700210B25 /* TileableRemoteBrightness.metal */; };
+		0504632C2B98555700210B25 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0504632B2B98555700210B25 /* main.m */; };
+		050463302B98555700210B25 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0504632E2B98555700210B25 /* InfoPlist.strings */; };
+		050463332B98555700210B25 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 050463312B98555700210B25 /* Localizable.strings */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		050463012B98555700210B25 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 050462EC2B98555700210B25 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 050462FE2B98555700210B25;
+			remoteInfo = "XPC Service";
+		};
+		0504630D2B98555700210B25 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 050462EC2B98555700210B25 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 050462FE2B98555700210B25;
+			remoteInfo = "XPC Service";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		050463392B98555700210B25 /* Embed PlugIns */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				050463002B98555700210B25 /* FxPostProcess XPC Service.pluginkit in Embed PlugIns */,
+			);
+			name = "Embed PlugIns";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		050462F42B98555700210B25 /* FxPostProcess.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FxPostProcess.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		050462F72B98555700210B25 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		050462FF2B98555700210B25 /* FxPostProcess XPC Service.pluginkit */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FxPostProcess XPC Service.pluginkit"; sourceTree = BUILT_PRODUCTS_DIR; };
+		050463032B98555700210B25 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		050463052B98555700210B25 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		050463072B98555700210B25 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		050463092B98555700210B25 /* PluginManager.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PluginManager.framework; path = Library/Frameworks/../../../../../../Library/Developer/Frameworks/PluginManager.framework; sourceTree = DEVELOPER_DIR; };
+		0504630B2B98555700210B25 /* FxPlug.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FxPlug.framework; path = Library/Frameworks/../../../../../../Library/Developer/Frameworks/FxPlug.framework; sourceTree = DEVELOPER_DIR; };
+		050463112B98555700210B25 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		050463122B98555700210B25 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		050463152B98555700210B25 /* FxPostProcessPlugIn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FxPostProcessPlugIn.h; sourceTree = "<group>"; };
+		050463162B98555700210B25 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		050463182B98555700210B25 /* FxPostProcessPlugIn.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FxPostProcessPlugIn.m; sourceTree = "<group>"; };
+		0504631A2B98555700210B25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0504631B2B98555700210B25 /* MetalDeviceCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MetalDeviceCache.h; sourceTree = "<group>"; };
+		0504631D2B98555700210B25 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0504631F2B98555700210B25 /* MetalDeviceCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MetalDeviceCache.m; sourceTree = "<group>"; };
+		050463222B98555700210B25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		050463252B98555700210B25 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		050463272B98555700210B25 /* TileableRemoteBrightness.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = TileableRemoteBrightness.metal; sourceTree = "<group>"; };
+		050463292B98555700210B25 /* SandboxEntitlements.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SandboxEntitlements.entitlements; sourceTree = "<group>"; };
+		0504632A2B98555700210B25 /* TileableRemoteBrightnessShaderTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TileableRemoteBrightnessShaderTypes.h; sourceTree = "<group>"; };
+		0504632B2B98555700210B25 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0504632D2B98555700210B25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0504632F2B98555700210B25 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		050463322B98555700210B25 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		050462F12B98555700210B25 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				050462F82B98555700210B25 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		050462FA2B98555700210B25 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				050463082B98555700210B25 /* Accelerate.framework in Frameworks */,
+				0504630A2B98555700210B25 /* PluginManager.framework in Frameworks */,
+				050463042B98555700210B25 /* Foundation.framework in Frameworks */,
+				050463062B98555700210B25 /* AppKit.framework in Frameworks */,
+				0504630C2B98555700210B25 /* FxPlug.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		050462EB2B98555700210B25 = {
+			isa = PBXGroup;
+			children = (
+				0504630F2B98555700210B25 /* FxPostProcess */,
+				050462F62B98555700210B25 /* Frameworks */,
+				050462F52B98555700210B25 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		050462F52B98555700210B25 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				050462F42B98555700210B25 /* FxPostProcess.app */,
+				050462FF2B98555700210B25 /* FxPostProcess XPC Service.pluginkit */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		050462F62B98555700210B25 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				050462F72B98555700210B25 /* Cocoa.framework */,
+				050463032B98555700210B25 /* Foundation.framework */,
+				050463052B98555700210B25 /* AppKit.framework */,
+				050463072B98555700210B25 /* Accelerate.framework */,
+				050463092B98555700210B25 /* PluginManager.framework */,
+				0504630B2B98555700210B25 /* FxPlug.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0504630F2B98555700210B25 /* FxPostProcess */ = {
+			isa = PBXGroup;
+			children = (
+				050463102B98555700210B25 /* Wrapper Application */,
+				050463142B98555700210B25 /* Plugin */,
+			);
+			path = FxPostProcess;
+			sourceTree = "<group>";
+		};
+		050463102B98555700210B25 /* Wrapper Application */ = {
+			isa = PBXGroup;
+			children = (
+				050463112B98555700210B25 /* AppDelegate.h */,
+				050463122B98555700210B25 /* AppDelegate.m */,
+				050463162B98555700210B25 /* main.m */,
+				0504631A2B98555700210B25 /* Info.plist */,
+				0504631C2B98555700210B25 /* InfoPlist.strings */,
+				050463212B98555700210B25 /* MainMenu.xib */,
+				050463242B98555700210B25 /* Credits.rtf */,
+				050463292B98555700210B25 /* SandboxEntitlements.entitlements */,
+			);
+			path = "Wrapper Application";
+			sourceTree = "<group>";
+		};
+		050463142B98555700210B25 /* Plugin */ = {
+			isa = PBXGroup;
+			children = (
+				050463152B98555700210B25 /* FxPostProcessPlugIn.h */,
+				050463182B98555700210B25 /* FxPostProcessPlugIn.m */,
+				0504631B2B98555700210B25 /* MetalDeviceCache.h */,
+				0504631F2B98555700210B25 /* MetalDeviceCache.m */,
+				050463272B98555700210B25 /* TileableRemoteBrightness.metal */,
+				0504632A2B98555700210B25 /* TileableRemoteBrightnessShaderTypes.h */,
+				0504632B2B98555700210B25 /* main.m */,
+				0504632D2B98555700210B25 /* Info.plist */,
+				0504632E2B98555700210B25 /* InfoPlist.strings */,
+				050463312B98555700210B25 /* Localizable.strings */,
+			);
+			path = Plugin;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		050462F32B98555700210B25 /* Wrapper Application */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0504633A2B98555700210B25 /* Build configuration list for PBXNativeTarget "Wrapper Application" */;
+			buildPhases = (
+				050462F02B98555700210B25 /* Sources */,
+				050462F12B98555700210B25 /* Frameworks */,
+				050462F22B98555700210B25 /* Resources */,
+				050463392B98555700210B25 /* Embed PlugIns */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				050463022B98555700210B25 /* PBXTargetDependency */,
+				0504630E2B98555700210B25 /* PBXTargetDependency */,
+			);
+			name = "Wrapper Application";
+			productName = "Wrapper Application";
+			productReference = 050462F42B98555700210B25 /* FxPostProcess.app */;
+			productType = "com.apple.product-type.application";
+		};
+		050462FE2B98555700210B25 /* XPC Service */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 050463362B98555700210B25 /* Build configuration list for PBXNativeTarget "XPC Service" */;
+			buildPhases = (
+				050462F92B98555700210B25 /* Sources */,
+				050462FA2B98555700210B25 /* Frameworks */,
+				050462FB2B98555700210B25 /* Resources */,
+				050462FC2B98555700210B25 /* Copy and Code Sign FxPlug.framework */,
+				050462FD2B98555700210B25 /* Copy and Code Sign PluginManager.framework */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "XPC Service";
+			productName = "XPC Service";
+			productReference = 050462FF2B98555700210B25 /* FxPostProcess XPC Service.pluginkit */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		050462EC2B98555700210B25 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					050462F32B98555700210B25 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					050462FE2B98555700210B25 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+				};
+			};
+			buildConfigurationList = 050462EF2B98555700210B25 /* Build configuration list for PBXProject "FxPostProcess" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 050462EB2B98555700210B25;
+			productRefGroup = 050462F52B98555700210B25 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				050462F32B98555700210B25 /* Wrapper Application */,
+				050462FE2B98555700210B25 /* XPC Service */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		050462F22B98555700210B25 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0504631E2B98555700210B25 /* InfoPlist.strings in Resources */,
+				050463262B98555700210B25 /* Credits.rtf in Resources */,
+				050463232B98555700210B25 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		050462FB2B98555700210B25 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				050463302B98555700210B25 /* InfoPlist.strings in Resources */,
+				050463332B98555700210B25 /* Localizable.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		050462FC2B98555700210B25 /* Copy and Code Sign FxPlug.framework */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Copy and Code Sign FxPlug.framework";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "mkdir -p \"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}\"\nrsync --archive --links --whole-file --no-owner --no-group --checksum --exclude='Headers' \"/Library/Developer/Frameworks/FxPlug.framework/\" \"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FxPlug.framework/\"\nif [ \"$?\" -ne 0 ]; then echo \"error: rsync failed; couldn't embed FxPlug.framework\"; exit 1; fi\ncodesign --force --timestamp --options runtime --sign \"${CODE_SIGN_IDENTITY}\" \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/FxPlug.framework\"";
+			showEnvVarsInLog = 0;
+		};
+		050462FD2B98555700210B25 /* Copy and Code Sign PluginManager.framework */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Copy and Code Sign PluginManager.framework";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "mkdir -p \"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}\"\nrsync --archive --links --whole-file --no-owner --no-group --checksum --exclude='Headers' \"/Library/Developer/Frameworks/PluginManager.framework/\" \"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PluginManager.framework/\"\nif [ \"$?\" -ne 0 ]; then echo \"error: rsync failed; couldn't embed PluginManager.framework\"; exit 1; fi\ncodesign --force --timestamp --options runtime --sign \"${CODE_SIGN_IDENTITY}\" \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/PluginManager.framework\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		050462F02B98555700210B25 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				050463172B98555700210B25 /* main.m in Sources */,
+				050463132B98555700210B25 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		050462F92B98555700210B25 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				050463202B98555700210B25 /* MetalDeviceCache.m in Sources */,
+				050463282B98555700210B25 /* TileableRemoteBrightness.metal in Sources */,
+				0504632C2B98555700210B25 /* main.m in Sources */,
+				050463192B98555700210B25 /* FxPostProcessPlugIn.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		050463022B98555700210B25 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 050462FE2B98555700210B25 /* XPC Service */;
+			targetProxy = 050463012B98555700210B25 /* PBXContainerItemProxy */;
+		};
+		0504630E2B98555700210B25 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 050462FE2B98555700210B25 /* XPC Service */;
+			targetProxy = 0504630D2B98555700210B25 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0504631C2B98555700210B25 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0504631D2B98555700210B25 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		050463212B98555700210B25 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				050463222B98555700210B25 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		050463242B98555700210B25 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				050463252B98555700210B25 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		0504632E2B98555700210B25 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0504632F2B98555700210B25 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		050463312B98555700210B25 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				050463322B98555700210B25 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		050463342B98555700210B25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ADDITIONAL_SDKS = /Library/Developer/SDKs/FxPlug.sdk;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					/Library/Frameworks,
+					"$(inherited)",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5;
+			};
+			name = Debug;
+		};
+		050463352B98555700210B25 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ADDITIONAL_SDKS = /Library/Developer/SDKs/FxPlug.sdk;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					/Library/Frameworks,
+					"$(inherited)",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5;
+			};
+			name = Release;
+		};
+		050463372B98555700210B25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				INFOPLIST_FILE = FxPostProcess/Plugin/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@loader_path/../Frameworks",
+				);
+				MACH_O_TYPE = mh_execute;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "FxPostProcess $(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FxPostProcess/Plugin/XPC Service-Bridging-Header.h";
+				WRAPPER_EXTENSION = pluginkit;
+			};
+			name = Debug;
+		};
+		050463382B98555700210B25 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				INFOPLIST_FILE = FxPostProcess/Plugin/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@loader_path/../Frameworks",
+				);
+				MACH_O_TYPE = mh_execute;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "FxPostProcess $(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FxPostProcess/Plugin/XPC Service-Bridging-Header.h";
+				WRAPPER_EXTENSION = pluginkit;
+			};
+			name = Release;
+		};
+		0504633B2B98555700210B25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "FxPostProcess/Wrapper Application/SandboxEntitlements.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				ENABLE_HARDENED_RUNTIME = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				INFOPLIST_FILE = "FxPostProcess/Wrapper Application/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = FxPostProcess;
+				SWIFT_OBJC_BRIDGING_HEADER = "FxPostProcess/Wrapper Application/Wrapper Application-Bridging-Header.h";
+			};
+			name = Debug;
+		};
+		0504633C2B98555700210B25 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "FxPostProcess/Wrapper Application/SandboxEntitlements.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				ENABLE_HARDENED_RUNTIME = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				INFOPLIST_FILE = "FxPostProcess/Wrapper Application/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = FxPostProcess;
+				SWIFT_OBJC_BRIDGING_HEADER = "FxPostProcess/Wrapper Application/Wrapper Application-Bridging-Header.h";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		050462EF2B98555700210B25 /* Build configuration list for PBXProject "FxPostProcess" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				050463342B98555700210B25 /* Debug */,
+				050463352B98555700210B25 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		050463362B98555700210B25 /* Build configuration list for PBXNativeTarget "XPC Service" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				050463372B98555700210B25 /* Debug */,
+				050463382B98555700210B25 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0504633A2B98555700210B25 /* Build configuration list for PBXNativeTarget "Wrapper Application" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0504633B2B98555700210B25 /* Debug */,
+				0504633C2B98555700210B25 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 050462EC2B98555700210B25 /* Project object */;
+}
