@@ -20,8 +20,8 @@ typedef enum BrightnessTextureIndex {
 } BrightnessTextureIndex;
 
 typedef enum BrightnessFragmentIndex {
-    BFI_Brightness  = 0
-} BrightnessFragmentIndex;
+    BFI_index  = 0
+} FragmentIndex;
 
 typedef struct Vertex2D {
     vector_float2   position;

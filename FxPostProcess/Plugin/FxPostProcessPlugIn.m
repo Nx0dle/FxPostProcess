@@ -12,6 +12,12 @@
 
 @implementation FxPostProcessPlugIn
 
+typedef struct {
+    int grayScale;
+    int negative;
+    double brightness;
+} ParamsToData;
+
 //---------------------------------------------------------
 // initWithAPIManager:
 //
@@ -72,18 +78,28 @@
         return NO;
     }
     
-    if (![paramAPI addFloatSliderWithName:@"Brightness"
-                              parameterID:1
-                             defaultValue:1.0
-                             parameterMin:0.0
-                             parameterMax:100.0
-                                sliderMin:0.0
-                                sliderMax:10.0
-                                    delta:0.1
-                           parameterFlags:kFxParameterFlag_DEFAULT])
+    if (!([paramAPI addToggleButtonWithName:@"Gray scale"
+                               parameterID:1
+                              defaultValue:false
+                            parameterFlags:kFxParameterFlag_DEFAULT]
+        &&
+        [paramAPI addToggleButtonWithName:@"Negative"
+                              parameterID:2
+                             defaultValue:false
+                           parameterFlags:kFxParameterFlag_DEFAULT]
+          &&
+          [paramAPI addFloatSliderWithName:@"Brightness"
+                               parameterID:3
+                              defaultValue:1.0
+                              parameterMin:0.0
+                              parameterMax:100.0
+                                 sliderMin:0.0
+                                 sliderMax:5.0
+                                     delta:0.1
+                            parameterFlags:kFxParameterFlag_DEFAULT]))
     {
         NSDictionary*   userInfo    = @{
-                                        NSLocalizedDescriptionKey : @"Unable to add brightness slider"
+                                        NSLocalizedDescriptionKey : @"Unable to add sliders"
                                         };
         if (error != NULL)
             *error = [NSError errorWithDomain:FxPlugErrorDomain
@@ -119,13 +135,27 @@
     id<FxParameterRetrievalAPI_v6>  paramGetAPI = [_apiManager apiForProtocol:@protocol(FxParameterRetrievalAPI_v6)];
     if (paramGetAPI != nil)
     {
-        double  brightness  = 1.0;
-        [paramGetAPI getFloatValue:&brightness
-                     fromParameter:1
+        
+        
+        ParamsToData toData;
+        toData.grayScale = 0;
+        toData.negative = 0;
+        toData.brightness = 1.0;
+        
+        [paramGetAPI getIntValue:&toData.grayScale
+                   fromParameter:1
+                          atTime:renderTime];
+        
+        [paramGetAPI getIntValue:&toData.negative
+                   fromParameter:2
+                          atTime:renderTime];
+        
+        [paramGetAPI getFloatValue:&toData.brightness
+                     fromParameter:3
                             atTime:renderTime];
         
-        *pluginState = [NSData dataWithBytes:&brightness
-                                      length:sizeof(brightness)];
+        *pluginState = [NSData dataWithBytes:&toData
+                                      length:sizeof(toData)];
         
         if (*pluginState != nil)
         {
@@ -231,9 +261,13 @@
     
     // This is where you would access parameter values and other info about the source tile
     // from the pluginState.
-    double  brightness = 0.0;
-    [pluginState getBytes:&brightness
-                   length:sizeof(brightness)];
+    ParamsToData toData;
+    toData.grayScale = 1;
+    toData.negative = 1;
+    toData.brightness = 0.0;
+    
+    [pluginState getBytes:&toData
+                   length:sizeof(toData)];
     
     // Set up the renderer, in this case we are using Metal.
     
@@ -295,10 +329,20 @@
     [commandEncoder setFragmentTexture:inputTexture
                                atIndex:BTI_InputImage];
     
-    float   fragmentBrightness = (float)brightness;
+    int   fragmentGrayScale = (int)toData.grayScale;
+    [commandEncoder setFragmentBytes:&fragmentGrayScale
+                              length:sizeof(fragmentGrayScale)
+                             atIndex:0];
+    
+    int   fragmentNegative = (int)toData.negative;
+    [commandEncoder setFragmentBytes:&fragmentNegative
+                              length:sizeof(fragmentNegative)
+                             atIndex:1];
+    
+    float   fragmentBrightness = (float)toData.brightness;
     [commandEncoder setFragmentBytes:&fragmentBrightness
                               length:sizeof(fragmentBrightness)
-                             atIndex:BFI_Brightness];
+                             atIndex:2];
     
     [commandEncoder drawPrimitives:MTLPrimitiveTypeTriangleStrip
                        vertexStart:0
